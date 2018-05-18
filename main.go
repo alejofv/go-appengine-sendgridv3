@@ -95,7 +95,7 @@ func sendEmail(httpClient *http.Client, params emailContactParams) (*rest.Respon
 	plainText := mail.NewContent("text/plain", params.Subject)
 	html := mail.NewContent("text/html", params.Subject)
 
-	message := new(mail.SGMailV3)
+	message := mail.NewV3Mail()
 	message.Subject = "Test mail from AppEngine"
 	message.SetFrom(from)
 	message.SetTemplateID(templateID)
