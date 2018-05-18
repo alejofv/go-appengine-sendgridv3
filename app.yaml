@@ -1,0 +1,12 @@
+runtime: go
+api_version: go1
+
+env_variables:
+  SENDGRID_API_KEY: 'your-api-key'
+  SENDGRID_FROM_NAME: 'AppEngine'
+  SENDGRID_FROM_EMAIL: 'sendgrid@appengine.com'
+  SENDGRID_TEMPLATE_ID: 'template-id'
+
+handlers:
+- url: /
+  script: _go_app
